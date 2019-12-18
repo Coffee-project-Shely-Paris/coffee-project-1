@@ -2,7 +2,7 @@
 
 function renderCoffee(coffee) {//sets up table//
     var html = '<div class="coffee">';
-    // html += '<td>' + coffee.id + '</td>';
+    html += '<td>' + coffee.id + '</td>';
     html += '<h1>' + coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -19,12 +19,7 @@ function renderCoffees() {
     }
     return html;
 }
-    // var coffeeString = "";
-    // coffees.forEach(function (coffee) {
-    //     coffeeString += "<div>" + coffee + "</div>";
-    // });
-    // // document.getElementById("myUL").innerHTML = coffeeString;
-    // console.log(coffeeString);
+
 
 
 function updateCoffees(e) {
@@ -37,6 +32,20 @@ function updateCoffees(e) {
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
+    coffeeslist.innerHTML = renderCoffees(filteredCoffees);
+}
+function searchCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var searchInput = userInput.value.toLowerCase();
+    var filteredCoffees = [];
+    coffees.forEach(function (coffee) {
+        var currentRoast = coffee.roast.toLowerCase();
+        var currentName = coffee.name.toLowerCase();
+        if (currentRoast.includes(searchInput) || currentName.includes(searchInput)) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    coffeeList.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -58,30 +67,23 @@ var coffees = [
 ];
 
 
-var tbody = document.querySelector('#coffees');
+var coffeeList = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var userInput = document.querySelector('#search-bar');
+var searchSubmit = document.querySelector('#search-btn');
 
-tbody.innerHTML = renderCoffees(coffees);
+
+coffeeList.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+searchSubmit.addEventListener("click", searchCoffees);
+userInput.addEventListener("keyup", searchCoffees);
 
-// function myFunction() {
-//     // Declare variables
-//     var input, filter, ul, li, a, i, txtValue;
-//     input = document.getElementById('myInput');
-//     filter = input.value.toUpperCase();
-//     ul = document.getElementById("myUL");
-//     li = ul.getElementsByTagName('li');
-//
-//     // Loop through all list items, and hide those who don't match the search query
-//     for (i = 0; i < li.length; i++) {
-//         a = li[i].getElementsByTagName("a")[0];
-//         txtValue = a.textContent || a.innerText;
-//         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//             li[i].style.display = "";
-//         } else {
-//             li[i].style.display = "none";
-//         }
-//     }
-// }
+
+
+
+
+
+
+
