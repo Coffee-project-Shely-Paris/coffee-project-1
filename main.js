@@ -7,8 +7,10 @@ function renderCoffee(coffee) {//sets up table//
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
-    return html.sort(function(a, b){return a-b});
+    return html
 }
+
+// coffees.sort(function(a, b){return a.id-b.id});
 
 function renderCoffees() {
     var html = '';
