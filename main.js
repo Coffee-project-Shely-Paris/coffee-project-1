@@ -1,8 +1,7 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {//sets up table//
     var html = '<div class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
     html += '<h1>' + coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -31,9 +30,10 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-    coffeeslist.innerHTML = renderCoffees(filteredCoffees);
+    // tbody.innerHTML = renderCoffees(filteredCoffees);
+    coffeeList.innerHTML = renderCoffees(filteredCoffees);
 }
+
 function searchCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var searchInput = userInput.value.toLowerCase();
