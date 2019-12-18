@@ -1,6 +1,6 @@
 "use strict"
 
-function renderCoffee(coffee) {
+function renderCoffee(coffee) {//sets up table//
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
     html += '<td>' + coffee.name + '</td>';
@@ -47,6 +47,7 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
