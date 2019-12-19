@@ -4,6 +4,7 @@ function renderCoffee(coffee) {//sets up table//
     var html = '<div class="coffee">';
     html += '<h1>' + coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
+    html += '<img src ="'+coffee.image+ '" width="400px" height="400px">';
     html += '</div>';
 
     return html
@@ -48,20 +49,20 @@ function searchCoffees(e) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 2, name: 'Cafe Latte', roast: 'light', image: 'img/cafe-latte.jpg'},
+    {id: 3, name: 'Ca Phe', roast: 'light', image: 'img/ca phe.jpeg'},
+    {id: 4, name: 'Americano', roast: 'medium', image: 'img/cafe americano.jpeg'},
+    {id: 5, name: 'Cappucino', roast: 'medium', image: 'img/cappucino.jpeg'},
+    {id: 6, name: 'Cuban Espressot', roast: 'medium', image: 'img/cuban espresso.jpg'},
+    {id: 7, name: 'Iced Coffee', roast: 'dark', image: "img/IcedCoffee.jpg"},
+    {id: 1, name: 'LongBlack', roast: 'light',image: 'img/LongBlack.jpg'},
+    {id: 8, name: 'MaheshiLama', roast: 'dark',image: "img/MaheshiLama.jpg"},
+    {id: 9, name: 'Oaxacan spice latte', roast: 'dark',image: "img/Oaxacan spice latte.jpg"},
+    {id: 10, name: 'Rüdesheimer', roast: 'dark',image: "img/Rüdesheimer.jpg"},
+    {id: 11, name: 'irish coffee', roast: 'dark',image: "img/irish coffee.jpg"},
+    {id: 12, name: 'Viennese', roast: 'dark',image: "img/IcedCoffee.jpg"},
+    {id: 13, name: 'turkish', roast: 'dark',image: "img/turkish coffee.jpg"},
+    {id: 14, name: 'Yuenyeung', roast: 'dark',image: "img/yuenyeung-china.jpeg"},
 ];
 
 
