@@ -39,11 +39,15 @@ function renderCoffee(coffee) {//sets up table//
     return html
 }
 
+<<<<<<< HEAD
 
 function renderCoffees() {
+=======
+function renderCoffees(filteredList) {
+>>>>>>> 7024bba457e744b7d6839de3e43379f1d1fbe724
     var html = '';
-    for (var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
+    for (var i = filteredList.length - 1; i >= 0; i--) {
+        html += renderCoffee(filteredList[i]);
     }
     return html;
 }
@@ -78,6 +82,30 @@ function searchCoffees(e) {
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+<<<<<<< HEAD
+=======
+var coffees = [
+    {id: 2, name: 'Half City', roast: 'light'},
+    {id: 3, name: 'Cinnamon', roast: 'light'},
+    {id: 4, name: 'City', roast: 'medium'},
+    {id: 5, name: 'American', roast: 'medium'},
+    {id: 6, name: 'Breakfast', roast: 'medium'},
+    {id: 7, name: 'High', roast: 'dark'},
+    {id: 1, name: 'Light City', roast: 'light'},
+    {id: 8, name: 'Continental', roast: 'dark'},
+    {id: 9, name: 'New Orleans', roast: 'dark'},
+    {id: 10, name: 'European', roast: 'dark'},
+    {id: 11, name: 'Espresso', roast: 'dark'},
+    {id: 12, name: 'Viennese', roast: 'dark'},
+    {id: 13, name: 'Italian', roast: 'dark'},
+    {id: 14, name: 'French', roast: 'dark'},
+];
+>>>>>>> 7024bba457e744b7d6839de3e43379f1d1fbe724
+
+
+
+
+<<<<<<< HEAD
 
 
 
@@ -89,7 +117,10 @@ function searchCoffees(e) {
 
 
 
+=======
+coffeeList.innerHTML = renderCoffees(coffees.sort(function(a, b){return a.id-b.id}));
 
-
-
-
+submitButton.addEventListener('click', updateCoffees);
+searchSubmit.addEventListener("click", searchCoffees);
+userInput.addEventListener("keyup", searchCoffees);
+>>>>>>> 7024bba457e744b7d6839de3e43379f1d1fbe724
