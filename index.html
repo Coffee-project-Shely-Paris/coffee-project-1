@@ -8,62 +8,72 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<style>
-#main-container {
-    background-image: url("/img/spilled-beans.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 60vh;
-    color: black;
-    }
-</style>
-
-
-
-
 <body>
-<div class="jumbotron jumbotron-fluid" id= main-container>
-    <div class="container" id="jumbotron-container">
-        <h1 class="display-4 text-right text-lg text-light">World of Coffee!</h1>
-        <p class="lead text-right text-light">Explore the wonderful world of Coffee!</p>
-<!--        <p class="text-right text-light">Check out my collection.</p>-->
-        <p class="lead">
-<!--            <a class="btn btn-secondary btn-lg float-right" href="#" role="button">My Story</a>-->
-    </div>
+<!--Beginning of container-->
+<div class = "container text-center" >
+<!--    Heading-->
+    <h1>Coffee!</h1>
+    <hr>
+<!--    End of Container-->
 </div>
 
-<!--<form>-->
-<!--    <div class="form-group">-->
-<!--        <label for="roast-selection">Email address</label>-->
-<!--        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">-->
-<!--    </div>-->
-<!--    <div class="form-group">-->
-<!--        <label for="exampleFormControlSelect1">Example select</label>-->
-<!--        <select class="form-control" id="exampleFormControlSelect1">-->
-<!--            <option>light</option>-->
-<!--            <option>Medium</option>-->
-<!--            <option>Dark</option>-->
-<!--        </select>-->
+<!--Beginning of container-->
+<div class="container">
+    <div class="row">
+<!--        Coffee names rendered-->
+            <div id="coffees" class="col-6 d-flex flex-row flex-wrap pr-2"></div>
 
-<form id="image">
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <input id="submit" type="submit" />
-</form>
 
-<p id="coffees"></p>
+        <div class="col-6">
+<!--Roast form selector for searching-->
+            <form>
+                <div class="form-group">
+                <label for="roast-selection">Roast</label>
+                    <select id="roast-selection">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+<!--Search bar-->
+            <div class="form-group">
+                <label for="search-bar">Coffee Name</label>
+                    <input id="search-bar" class="form-control" type="text">
+            </div>
+<!--                Submit button-->
+                <button class="btn btn-primary btn-block mt-2 " type="button" id="submit">Submit</button>
 
-<div class="container col-6">
-    <div class="row flex-direction-end">
-        <input id="search-bar" type="text"
-               name="search-bar" placeholder="Search Coffee..">
-        <input id="search-btn" value="search" type="submit" />
+            </form>
+<!--            Separating div-->
+            <div class="w-100">
+            </div>
+            <hr>
+<!--            Add coffee section-->
+            <h2 class="text-center">Add a Coffee</h2>
+<!--            Add coffee roast selector-->
+            <form>
+                <div class="form-group">
+                    <label for="addCoffeeRoast">Roast</label>
+                    <select class="form-control" id="addCoffeeRoast">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div class="form-group">
+<!--                    Coffee add bar-->
+                    <label for="addCoffeeName">Name</label>
+                    <input id="addCoffeeName" class="form-control" type="search" aria-label="Search">
+                </div>
+<!--                Submit button for adding coffee-->
+                <button class="btn btn-primary btn-block mt-2 " id="btn-addCoffee" type="button">Submit</button>
+            </form>
+        </div>
     </div>
+<!--    End of container-->
 </div>
+
 <script src="main.js"></script>
 
 
