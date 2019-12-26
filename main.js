@@ -2,7 +2,7 @@
 
 function renderCoffee(coffee) {//sets up table//
     var html = '<div class="coffee">';
-    html += '<img src ="'+coffee.image+ '" width="200px" height="200px">';
+    html += '<img src ="'+coffee.image+'" width="200px" height="200px">';
     html += '<h1>' + coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -70,27 +70,27 @@ function addCoffee(e){
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 2, name: 'Cafe Latte', roast: 'light', image: 'img/cafe-latte.jpg'},
-    {id: 3, name: 'Ca Phe', roast: 'light', image: 'img/ca phe.jpeg'},
-    {id: 4, name: 'Americano', roast: 'medium', image: 'img/cafe americano.jpeg'},
-    {id: 5, name: 'Cappucino', roast: 'medium', image: 'img/cappucino.jpeg'},
-    {id: 6, name: 'Cuban Espressot', roast: 'medium', image: 'img/cuban espresso.jpg'},
-    {id: 7, name: 'Iced Coffee', roast: 'dark', image: "img/IcedCoffee.jpg"},
-    {id: 1, name: 'LongBlack', roast: 'light',image: 'img/LongBlack.jpg'},
-    {id: 8, name: 'MaheshiLama', roast: 'dark',image: "img/MaheshiLama.jpg"},
-    {id: 9, name: 'Oaxacan spice latte', roast: 'dark',image: "img/Oaxacan spice latte.jpg"},
-    {id: 10, name: 'Rüdesheimer', roast: 'dark',image: "img/Rüdesheimer.jpg"},
-    {id: 11, name: 'irish coffee', roast: 'dark',image: "img/irish coffee.jpg"},
-    {id: 12, name: 'Viennese', roast: 'dark',image: "img/IcedCoffee.jpg"},
-    {id: 13, name: 'turkish', roast: 'dark',image: "img/turkish coffee.jpg"},
-    {id: 14, name: 'Yuenyeung', roast: 'dark',image: "img/yuenyeung-china.jpeg"},
+    {id: 2, name: 'Cafe Latte ', roast: 'light', image: 'img/cafe-latte.jpg'},
+    {id: 3, name: 'Ca Phe ', roast: 'light', image: 'img/ca phe.jpeg'},
+    {id: 4, name: 'Americano ', roast: 'medium', image: 'img/cafe americano.jpeg'},
+    {id: 5, name: 'Cappucino ', roast: 'medium', image: 'img/cappucino.jpeg'},
+    {id: 6, name: 'Cuban Espresso ', roast: 'medium', image: 'img/cuban espresso.jpg'},
+    {id: 7, name: 'Iced Coffee ', roast: 'dark', image: "img/IcedCoffee.jpg"},
+    {id: 1, name: 'LongBlack ', roast: 'light',image: 'img/LongBlack.jpg'},
+    {id: 8, name: 'MaheshiLama ', roast: 'dark',image: "img/MaheshiLama.jpg"},
+    {id: 9, name: 'Oaxacan spice latte ', roast: 'dark',image: "img/Oaxacan spice latte.jpg"},
+    {id: 10, name: 'Rüdesheimer ', roast: 'dark',image: "img/Rüdesheimer.jpg"},
+    {id: 11, name: 'irish coffee ', roast: 'dark',image: "img/irish coffee.jpg"},
+    {id: 12, name: 'Viennese ', roast: 'dark',image: "img/IcedCoffee.jpg"},
+    {id: 13, name: 'turkish ', roast: 'dark',image: "img/turkish coffee.jpg"},
+    {id: 14, name: 'Yuenyeung ', roast: 'dark',image: "img/yuenyeung-china.jpeg"},
 ];
 
 
 var coffeeList = document.querySelector('#coffees');
 var roastSelection = document.querySelector('#roast-selection');
 var userInput = document.querySelector('#search-bar');
-var addCofefe = document.querySelector('#btn-addCoffee');
+var addCoffee = document.querySelector('#btn-addCoffee');
 var newCoffeeName = document.querySelector('#addCoffeeName');
 var newCoffeeRoast = document.querySelector('#addCoffeeRoast');
 
